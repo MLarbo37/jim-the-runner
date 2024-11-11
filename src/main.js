@@ -1,5 +1,6 @@
 import k from './kaplayCtx'
 import game from './scenes/game';
+import gameOver from './scenes/gameOver';
 import mainMenu from './scenes/mainMenu';
 
 k.loadSprite("chemical-bg", "graphics/chemical-bg.png");
@@ -19,7 +20,7 @@ k.loadSprite("ring", "graphics/ring.png", {
         spin: {from: 0, to: 15, loop: true, speed: 30}
     }
 });
-k.loadSprite("bug", "graphics/motobug.png", {
+k.loadSprite("bug", "graphics/spritesheet (3).png", {
     sliceX: 5,
     sliceY: 1,
     anims: {
@@ -37,6 +38,6 @@ k.loadSound("ring", "sounds/Ring.wav");
 
 k.scene("main-menu", mainMenu);
 k.scene("game", game);
-k.scene("gameover", () => {});
+k.scene("gameover", gameOver);
 
 k.go("main-menu")
